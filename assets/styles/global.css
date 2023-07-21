@@ -11,3 +11,7 @@
     src: url('../fonts/Roboto-Bold.ttf');
     font-weight: 700;
 }
+
+body {
+    font-family: 'Roboto Regular', sans-serif;
+}

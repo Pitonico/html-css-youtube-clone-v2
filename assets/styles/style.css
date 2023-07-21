@@ -1,1 +1,125 @@
 @import url(global.css);
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template:
+        "top-menu top-menu"
+        "sidebar content"
+        / 1fr 6fr;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.top-menu {
+    grid-area: top-menu;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.left, .center, .right {
+    display: flex;
+    align-items: center;
+}
+
+.left, .right {
+    gap: 20px;
+}
+
+.center {
+    border: 1px solid #ccc;
+    width: 404px;
+    height: 40px;
+}
+
+.right .avatar {
+    border-radius: 50%;
+}
+
+.avatar {
+    width: 24px;
+}
+
+.logo {
+    width: 90px;
+    height: 20px;
+}
+
+.search-bar {
+    font-size: 1.2rem;
+    border: none;
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.btn-search {
+   padding: 5px 10px;
+   background-color: #f8f8f8;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: fixed;
+    margin-top: 80px;
+}
+
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.side-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    gap: 10px;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.side-menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #efefef88;
+}
+.content section > img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.video-details {
+    display: flex;
+    gap: 10px;
+    align-items: top;
+}
+
+.video-details img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.video-details h2 {
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+
+.video-details p {
+    font-size: 0.75rem;
+}
